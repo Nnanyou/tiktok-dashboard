@@ -187,16 +187,41 @@ body {
 }
 .daily-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.daily-group {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px;
+}
+.daily-group-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #12304a;
+  margin-bottom: 12px;
+}
+.daily-group-count {
+  font-size: 13px;
+  color: #0f766e;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  padding: 3px 9px;
 }
 .daily-item {
   border: 1px solid #e5e7eb;
   border-left: 5px solid #0f766e;
   border-radius: 8px;
   padding: 16px;
-  background: #fbfcfd;
+  background: #fff;
+  margin-bottom: 12px;
 }
+.daily-item:last-child { margin-bottom: 0; }
 .daily-item.support { border-left-color: #dc2626; background: #fff7f7; }
 .daily-item.risk { border-left-color: #f59e0b; background: #fffbeb; }
 .daily-item.status { border-left-color: #2563eb; }
@@ -617,6 +642,7 @@ body {
 @media (max-width: 1200px) {
   .overview-cards { grid-template-columns: repeat(3, 1fr); }
   .store-cards { grid-template-columns: repeat(2, 1fr); }
+  .daily-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .header { padding: 20px; }
@@ -773,7 +799,7 @@ body {
 const dashboardData = {
   "month": "2026年7月",
   "subtitle": "商品测试、内容产能、剪辑外包与核心工作流验证",
-  "updateTime": "2026-07-15 16:02",
+  "updateTime": "2026-07-15 16:48",
   "updatePeriod": "每30分钟自动同步",
   "dataSource": "飞书多维表格「2026年7月月度KPI验收表」+「月度任务（半月）」+「店铺运营看板」",
   "overview": [
@@ -1274,166 +1300,18 @@ const dashboardData = {
   "dailyProgress": {
     "date": "2026-07-15",
     "summary": {
-      "totalChanges": 8,
+      "totalChanges": 0,
       "progressIncreased": 0,
       "statusChanged": 0,
       "needSupport": 0,
       "delayed": 0
     },
-    "items": [
-      {
-        "type": "new",
-        "taskNo": "M05-01",
-        "name": "发布剪辑外包招聘信息",
-        "owner": "葛宗尚",
-        "module": "外包管理",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 3.0,
-        "target": 3.0,
-        "unit": "渠道",
-        "beforeRate": 0,
-        "afterRate": 100,
-        "beforeStatus": "新增",
-        "afterStatus": "已完成",
-        "deadline": "2026-07-16",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M05-02",
-        "name": "主动联系剪辑候选人",
-        "owner": "葛宗尚",
-        "module": "外包管理",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 10.0,
-        "target": 10.0,
-        "unit": "人",
-        "beforeRate": 0,
-        "afterRate": 100,
-        "beforeStatus": "新增",
-        "afterStatus": "已完成",
-        "deadline": "2026-07-17",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M05-05",
-        "name": "完成付费试单",
-        "owner": "葛宗尚",
-        "module": "外包管理",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 1.0,
-        "target": 4.0,
-        "unit": "人",
-        "beforeRate": 0,
-        "afterRate": 25,
-        "beforeStatus": "新增",
-        "afterStatus": "进行中",
-        "deadline": "2026-07-25",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M04-02",
-        "name": "葛宗尚负责商品视频制作",
-        "owner": "葛宗尚",
-        "module": "内容生产",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 1.0,
-        "target": 12.0,
-        "unit": "条",
-        "beforeRate": 0,
-        "afterRate": 8,
-        "beforeStatus": "新增",
-        "afterStatus": "进行中",
-        "deadline": "2026-07-31",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M01",
-        "name": "4家店铺安全稳定运营",
-        "owner": "葛宗尚",
-        "module": "店铺运营",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 0.0,
-        "target": 4.0,
-        "unit": "家",
-        "beforeRate": 0,
-        "afterRate": 0,
-        "beforeStatus": "新增",
-        "afterStatus": "进行中",
-        "deadline": "2026-07-31",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M02",
-        "name": "完成TK商品选品与测试池建立",
-        "owner": "葛宗尚",
-        "module": "选品上架",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 0.0,
-        "target": 6.0,
-        "unit": "款",
-        "beforeRate": 0,
-        "afterRate": 0,
-        "beforeStatus": "新增",
-        "afterStatus": "进行中",
-        "deadline": "2026-07-18",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M05",
-        "name": "完成剪辑外包试单并留下至少2人",
-        "owner": "葛宗尚",
-        "module": "外包管理",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 0.0,
-        "target": 2.0,
-        "unit": "人",
-        "beforeRate": 0,
-        "afterRate": 0,
-        "beforeStatus": "新增",
-        "afterStatus": "进行中",
-        "deadline": "2026-07-31",
-        "needSupport": "否",
-        "delayed": "否"
-      },
-      {
-        "type": "new",
-        "taskNo": "M07",
-        "name": "完成视频AI生成工作流MVP",
-        "owner": "葛宗尚",
-        "module": "视频AI工作流",
-        "priority": "P0",
-        "beforeActual": 0,
-        "afterActual": 0.0,
-        "target": 1.0,
-        "unit": "套",
-        "beforeRate": 0,
-        "afterRate": 0,
-        "beforeStatus": "新增",
-        "afterStatus": "进行中",
-        "deadline": "2026-07-27",
-        "needSupport": "否",
-        "delayed": "否"
-      }
-    ]
+    "items": [],
+    "groups": {
+      "葛宗尚": [],
+      "欧阳林": [],
+      "共同任务": []
+    }
   },
   "nonCompliance": [],
   "supportRequests": {
@@ -1667,28 +1545,46 @@ function renderDailyProgress() {
     return;
   }
 
-  html += '<div class="daily-list">';
-  items.forEach(function(item) {
+  function renderDailyItem(item) {
     var typeText = item.type === "progress" ? "进度提升" :
       (item.type === "support" ? "需要支持" :
       (item.type === "risk" ? "延期风险" :
       (item.type === "new" ? "新增跟进" : "状态变化")));
-    html += '<div class="daily-item ' + item.type + '">';
-    html += '<div class="daily-meta">';
-    html += '<span class="daily-tag">' + typeText + '</span>';
-    html += '<span class="daily-tag">' + (item.priority || "P") + '</span>';
-    if (item.module) html += '<span class="daily-tag">' + item.module + '</span>';
-    html += '</div>';
-    html += '<div class="daily-task-name">' + item.taskNo + '｜' + item.name + '</div>';
-    html += '<div class="daily-change">';
+    var itemHtml = '<div class="daily-item ' + item.type + '">';
+    itemHtml += '<div class="daily-meta">';
+    itemHtml += '<span class="daily-tag">' + typeText + '</span>';
+    itemHtml += '<span class="daily-tag">' + (item.priority || "P") + '</span>';
+    if (item.module) itemHtml += '<span class="daily-tag">' + item.module + '</span>';
+    itemHtml += '</div>';
+    itemHtml += '<div class="daily-task-name">' + item.taskNo + '｜' + item.name + '</div>';
+    itemHtml += '<div class="daily-change">';
     if (item.type === "progress" || item.type === "new") {
-      html += item.owner + '：完成量从 ' + item.beforeActual + item.unit + ' 提升到 <strong>' + item.afterActual + item.unit + '</strong>';
-      html += '，完成率 ' + item.beforeRate + '% → <strong>' + item.afterRate + '%</strong>';
+      itemHtml += item.owner + '：完成量从 ' + item.beforeActual + item.unit + ' 提升到 <strong>' + item.afterActual + item.unit + '</strong>';
+      itemHtml += '，完成率 ' + item.beforeRate + '% → <strong>' + item.afterRate + '%</strong>';
     } else {
-      html += item.owner + '：状态从 ' + (item.beforeStatus || "未记录") + ' 更新为 <strong>' + item.afterStatus + '</strong>';
+      itemHtml += item.owner + '：状态从 ' + (item.beforeStatus || "未记录") + ' 更新为 <strong>' + item.afterStatus + '</strong>';
     }
-    html += '</div>';
-    html += '<div class="daily-bar"><div class="daily-bar-fill" style="width:' + item.afterRate + '%"></div></div>';
+    if (item.collaborator) itemHtml += '<div class="daily-subtitle">协作：' + item.collaborator + '</div>';
+    itemHtml += '</div>';
+    itemHtml += '<div class="daily-bar"><div class="daily-bar-fill" style="width:' + item.afterRate + '%"></div></div>';
+    itemHtml += '</div>';
+    return itemHtml;
+  }
+
+  var groups = progress.groups || {};
+  var groupNames = ["葛宗尚", "欧阳林", "共同任务"];
+  html += '<div class="daily-list">';
+  groupNames.forEach(function(groupName) {
+    var groupItems = groups[groupName] || [];
+    html += '<div class="daily-group">';
+    html += '<div class="daily-group-title"><span>' + groupName + '</span><span class="daily-group-count">' + groupItems.length + ' 项</span></div>';
+    if (!groupItems.length) {
+      html += '<div class="daily-empty" style="padding:18px;font-size:14px;">暂无新的进展</div>';
+    } else {
+      groupItems.forEach(function(item) {
+        html += renderDailyItem(item);
+      });
+    }
     html += '</div>';
   });
   html += '</div>';
