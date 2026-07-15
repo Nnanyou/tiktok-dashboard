@@ -11,10 +11,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
-  background: #f0f2f5;
-  color: #1a1a2e;
+  background: #f6f7f9;
+  color: #172033;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 17px;
 }
 .container { max-width: 1400px; margin: 0 auto; padding: 20px 24px; }
 
@@ -22,9 +22,9 @@ body {
    顶部标题区
    ============================================================ */
 .header {
-  background: #1a3350;
+  background: linear-gradient(135deg, #12304a 0%, #1f5f66 100%);
   color: #fff;
-  padding: 28px 36px;
+  padding: 30px 38px;
   border-radius: 10px;
   margin-bottom: 20px;
   display: flex;
@@ -33,7 +33,7 @@ body {
   flex-wrap: wrap;
   gap: 16px;
 }
-.header-left h1 { font-size: 30px; font-weight: 700; letter-spacing: 1px; }
+.header-left h1 { font-size: 34px; font-weight: 800; letter-spacing: 0; }
 .header-left .subtitle { font-size: 17px; opacity: 0.85; margin-top: 6px; }
 .header-right { text-align: right; flex-shrink: 0; }
 .header-right .month-badge {
@@ -85,12 +85,12 @@ body {
    区块标题
    ============================================================ */
 .section-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #1a3350;
+  font-size: 24px;
+  font-weight: 800;
+  color: #172033;
   margin: 28px 0 14px;
   padding-left: 14px;
-  border-left: 5px solid #1a3350;
+  border-left: 5px solid #0f766e;
 }
 
 /* ============================================================
@@ -104,16 +104,16 @@ body {
 }
 .overview-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 22px 18px 18px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  border-top: 4px solid #1a3350;
+  border-top: 4px solid #0f766e;
 }
 .overview-card .oc-number {
-  font-size: 34px;
-  font-weight: 700;
-  color: #1a3350;
+  font-size: 36px;
+  font-weight: 800;
+  color: #12304a;
   line-height: 1.2;
 }
 .overview-card .oc-label {
@@ -142,6 +142,112 @@ body {
 .oc-orange .oc-bar-fill { background: #f0a030; }
 .oc-gray   .oc-number { color: #6c757d; }
 .oc-gray   .oc-bar-fill { background: #adb5bd; }
+
+/* ============================================================
+   今日工作进展
+   ============================================================ */
+.daily-progress {
+  background: #fff;
+  border-radius: 8px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+}
+.daily-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.daily-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #12304a;
+}
+.daily-subtitle {
+  color: #64748b;
+  font-size: 15px;
+  margin-top: 4px;
+}
+.daily-summary {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.daily-pill {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.daily-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.daily-item {
+  border: 1px solid #e5e7eb;
+  border-left: 5px solid #0f766e;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fbfcfd;
+}
+.daily-item.support { border-left-color: #dc2626; background: #fff7f7; }
+.daily-item.risk { border-left-color: #f59e0b; background: #fffbeb; }
+.daily-item.status { border-left-color: #2563eb; }
+.daily-item.new { border-left-color: #7c3aed; }
+.daily-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.daily-tag {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #075985;
+  font-size: 13px;
+  font-weight: 700;
+}
+.daily-task-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #172033;
+  margin-bottom: 8px;
+}
+.daily-change {
+  font-size: 16px;
+  color: #334155;
+  margin-bottom: 10px;
+}
+.daily-change strong { color: #047857; font-size: 20px; }
+.daily-bar {
+  height: 9px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.daily-bar-fill {
+  height: 100%;
+  background: #0f766e;
+  border-radius: 999px;
+}
+.daily-empty {
+  padding: 28px;
+  text-align: center;
+  color: #64748b;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px dashed #cbd5e1;
+  font-weight: 700;
+}
 
 /* ============================================================
    双栏布局 - 个人KPI卡片
@@ -406,10 +512,10 @@ body {
 }
 .store-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 18px 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  border-top: 4px solid #1a3350;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  border-top: 4px solid #0f766e;
 }
 .store-card.store-my { border-top-color: #2d5a8a; }
 .store-card.store-ph { border-top-color: #1a6b4a; }
@@ -421,7 +527,7 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #eef1f5;
 }
-.store-name { font-size: 17px; font-weight: 700; color: #1a3350; }
+.store-name { font-size: 19px; font-weight: 800; color: #12304a; }
 .store-country {
   font-size: 12px;
   font-weight: 600;
@@ -431,8 +537,31 @@ body {
 }
 .store-country.my { background: #2d5a8a; }
 .store-country.ph { background: #1a6b4a; }
-.store-owner { font-size: 13px; color: #888; margin-bottom: 12px; }
+.store-owner { font-size: 14px; color: #64748b; margin-bottom: 12px; }
 .store-owner strong { color: #555; }
+.store-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.store-metric {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+}
+.store-metric-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+.store-metric-value {
+  font-size: 22px;
+  color: #12304a;
+  font-weight: 800;
+  margin-top: 2px;
+}
 
 .store-task-item {
   margin-bottom: 11px;
@@ -444,10 +573,10 @@ body {
   align-items: center;
   margin-bottom: 4px;
 }
-.store-task-label { font-size: 14px; color: #333; font-weight: 500; }
-.store-task-pct { font-size: 13px; font-weight: 600; color: #1a3350; }
+.store-task-label { font-size: 15px; color: #172033; font-weight: 700; }
+.store-task-pct { font-size: 14px; font-weight: 800; color: #0f766e; }
 .store-task-bar {
-  height: 5px;
+  height: 8px;
   background: #e8ecf1;
   border-radius: 3px;
   overflow: hidden;
@@ -457,8 +586,8 @@ body {
   border-radius: 3px;
   transition: width 0.4s;
 }
-.store-task-bar-fill.green  { background: #28a745; }
-.store-task-bar-fill.orange { background: #f0a030; }
+.store-task-bar-fill.green  { background: #059669; }
+.store-task-bar-fill.orange { background: #f59e0b; }
 .store-task-bar-fill.red    { background: #dc3545; }
 .store-task-bar-fill.gray   { background: #adb5bd; }
 .store-task-note { font-size: 12px; color: #999; margin-top: 2px; }
@@ -554,6 +683,12 @@ body {
   <div class="overview-cards" id="overviewCards"></div>
 
   <!-- ============================================================
+       今日工作进展
+       ============================================================ -->
+  <div class="section-title">今日工作进展</div>
+  <div class="daily-progress" id="dailyProgress"></div>
+
+  <!-- ============================================================
        店铺运营状态（4家店 × 4项运营指标）
        ============================================================ -->
   <div class="section-title">店铺运营状态</div>
@@ -638,9 +773,9 @@ body {
 const dashboardData = {
   "month": "2026年7月",
   "subtitle": "商品测试、内容产能、剪辑外包与核心工作流验证",
-  "updateTime": "2026-07-15 10:29",
+  "updateTime": "2026-07-15 16:02",
   "updatePeriod": "每30分钟自动同步",
-  "dataSource": "飞书多维表格「2026年7月月度KPI验收表」+「周度任务执行追踪」",
+  "dataSource": "飞书多维表格「2026年7月月度KPI验收表」+「月度任务（半月）」+「店铺运营看板」",
   "overview": [
     {
       "key": "kpiPass",
@@ -1064,51 +1199,242 @@ const dashboardData = {
   },
   "weeklyP0": [
     {
-      "name": "【葛宗尚】店铺状态检查",
+      "name": "葛宗尚初筛TK商品",
       "owner": "葛宗尚",
-      "weekTarget": "1",
-      "actual": "0",
-      "status": "未开始",
-      "deadline": "红线P0，每周固定检查",
+      "weekTarget": "20.0款",
+      "actual": "0.0款 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-16",
       "blocked": false
     },
     {
-      "name": "【葛宗尚】IP/设备异常记录",
-      "owner": "葛宗尚",
-      "weekTarget": "1",
-      "actual": "0",
-      "status": "未开始",
-      "deadline": "红线P0",
+      "name": "欧阳林初筛TK商品",
+      "owner": "欧阳林",
+      "weekTarget": "20.0款",
+      "actual": "0.0款 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-16",
       "blocked": false
     },
     {
-      "name": "【葛宗尚】初筛候选商品",
+      "name": "锁定视频AI工作流MVP范围",
       "owner": "葛宗尚",
-      "weekTarget": "30",
-      "actual": "0",
-      "status": "未开始",
-      "deadline": "月均120÷4周",
+      "weekTarget": "1.0套",
+      "actual": "0.0套 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-16",
       "blocked": false
     },
     {
-      "name": "【葛宗尚】人工复核商品",
+      "name": "店铺设备和IP对应关系检查",
       "owner": "葛宗尚",
-      "weekTarget": "8",
-      "actual": "0",
-      "status": "未开始",
-      "deadline": "月均30÷4周",
+      "weekTarget": "4.0套",
+      "actual": "0.0套 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-17",
       "blocked": false
     },
     {
-      "name": "【葛宗尚】商品进入测试池",
+      "name": "完成TK商品选品与测试池建立",
       "owner": "葛宗尚",
-      "weekTarget": "3",
-      "actual": "0",
-      "status": "未开始",
-      "deadline": "月均10÷4周",
+      "weekTarget": "6.0款",
+      "actual": "0.0款 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-18",
+      "blocked": false
+    },
+    {
+      "name": "完成付费试单",
+      "owner": "葛宗尚",
+      "weekTarget": "4.0人",
+      "actual": "1.0人 (25%)",
+      "status": "进行中",
+      "deadline": "2026-07-25",
+      "blocked": false
+    },
+    {
+      "name": "完成视频AI生成工作流MVP",
+      "owner": "葛宗尚",
+      "weekTarget": "1.0套",
+      "actual": "0.0套 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-27",
+      "blocked": false
+    },
+    {
+      "name": "4家店铺安全稳定运营",
+      "owner": "葛宗尚",
+      "weekTarget": "4.0家",
+      "actual": "0.0家 (0%)",
+      "status": "进行中",
+      "deadline": "2026-07-31",
       "blocked": false
     }
   ],
+  "dailyProgress": {
+    "date": "2026-07-15",
+    "summary": {
+      "totalChanges": 8,
+      "progressIncreased": 0,
+      "statusChanged": 0,
+      "needSupport": 0,
+      "delayed": 0
+    },
+    "items": [
+      {
+        "type": "new",
+        "taskNo": "M05-01",
+        "name": "发布剪辑外包招聘信息",
+        "owner": "葛宗尚",
+        "module": "外包管理",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 3.0,
+        "target": 3.0,
+        "unit": "渠道",
+        "beforeRate": 0,
+        "afterRate": 100,
+        "beforeStatus": "新增",
+        "afterStatus": "已完成",
+        "deadline": "2026-07-16",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M05-02",
+        "name": "主动联系剪辑候选人",
+        "owner": "葛宗尚",
+        "module": "外包管理",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 10.0,
+        "target": 10.0,
+        "unit": "人",
+        "beforeRate": 0,
+        "afterRate": 100,
+        "beforeStatus": "新增",
+        "afterStatus": "已完成",
+        "deadline": "2026-07-17",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M05-05",
+        "name": "完成付费试单",
+        "owner": "葛宗尚",
+        "module": "外包管理",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 1.0,
+        "target": 4.0,
+        "unit": "人",
+        "beforeRate": 0,
+        "afterRate": 25,
+        "beforeStatus": "新增",
+        "afterStatus": "进行中",
+        "deadline": "2026-07-25",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M04-02",
+        "name": "葛宗尚负责商品视频制作",
+        "owner": "葛宗尚",
+        "module": "内容生产",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 1.0,
+        "target": 12.0,
+        "unit": "条",
+        "beforeRate": 0,
+        "afterRate": 8,
+        "beforeStatus": "新增",
+        "afterStatus": "进行中",
+        "deadline": "2026-07-31",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M01",
+        "name": "4家店铺安全稳定运营",
+        "owner": "葛宗尚",
+        "module": "店铺运营",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 0.0,
+        "target": 4.0,
+        "unit": "家",
+        "beforeRate": 0,
+        "afterRate": 0,
+        "beforeStatus": "新增",
+        "afterStatus": "进行中",
+        "deadline": "2026-07-31",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M02",
+        "name": "完成TK商品选品与测试池建立",
+        "owner": "葛宗尚",
+        "module": "选品上架",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 0.0,
+        "target": 6.0,
+        "unit": "款",
+        "beforeRate": 0,
+        "afterRate": 0,
+        "beforeStatus": "新增",
+        "afterStatus": "进行中",
+        "deadline": "2026-07-18",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M05",
+        "name": "完成剪辑外包试单并留下至少2人",
+        "owner": "葛宗尚",
+        "module": "外包管理",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 0.0,
+        "target": 2.0,
+        "unit": "人",
+        "beforeRate": 0,
+        "afterRate": 0,
+        "beforeStatus": "新增",
+        "afterStatus": "进行中",
+        "deadline": "2026-07-31",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "new",
+        "taskNo": "M07",
+        "name": "完成视频AI生成工作流MVP",
+        "owner": "葛宗尚",
+        "module": "视频AI工作流",
+        "priority": "P0",
+        "beforeActual": 0,
+        "afterActual": 0.0,
+        "target": 1.0,
+        "unit": "套",
+        "beforeRate": 0,
+        "afterRate": 0,
+        "beforeStatus": "新增",
+        "afterStatus": "进行中",
+        "deadline": "2026-07-27",
+        "needSupport": "否",
+        "delayed": "否"
+      }
+    ]
+  },
   "nonCompliance": [],
   "supportRequests": {
     "needed": false,
@@ -1118,112 +1444,88 @@ const dashboardData = {
     {
       "name": "马来西亚店1",
       "country": "my",
+      "countryLabel": "马来西亚",
       "owner": "葛宗尚",
       "health": "green",
+      "status": "正常运营",
+      "dailyClicks": 0,
+      "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
-          "label": "店铺数据监测",
+          "label": "平台任务",
           "pct": 0,
           "note": "每日记录曝光/点击/成交/加购"
         },
         {
-          "label": "营销活动",
+          "label": "每日点击",
           "pct": 0,
-          "note": "参与平台活动，设置秒杀/闪购"
-        },
-        {
-          "label": "平台任务",
-          "pct": 0,
-          "note": "完成平台成长任务领取奖励"
-        },
-        {
-          "label": "折扣优惠设置",
-          "pct": 0,
-          "note": "设置优惠券/满减/多件折扣"
+          "note": "今日点击 0"
         }
       ]
     },
     {
       "name": "马来西亚店2",
       "country": "my",
+      "countryLabel": "马来西亚",
       "owner": "葛宗尚",
       "health": "green",
+      "status": "正常运营",
+      "dailyClicks": 0,
+      "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
-          "label": "店铺数据监测",
+          "label": "平台任务",
           "pct": 0,
           "note": "每日记录曝光/点击/成交/加购"
         },
         {
-          "label": "营销活动",
+          "label": "每日点击",
           "pct": 0,
-          "note": "参与平台活动，设置秒杀/闪购"
-        },
-        {
-          "label": "平台任务",
-          "pct": 0,
-          "note": "完成平台成长任务领取奖励"
-        },
-        {
-          "label": "折扣优惠设置",
-          "pct": 0,
-          "note": "设置优惠券/满减/多件折扣"
+          "note": "今日点击 0"
         }
       ]
     },
     {
       "name": "菲律宾店1",
       "country": "ph",
+      "countryLabel": "菲律宾",
       "owner": "欧阳林",
       "health": "green",
+      "status": "正常运营",
+      "dailyClicks": 0,
+      "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
-          "label": "店铺数据监测",
+          "label": "平台任务",
           "pct": 0,
           "note": "每日记录曝光/点击/成交/加购"
         },
         {
-          "label": "营销活动",
+          "label": "每日点击",
           "pct": 0,
-          "note": "参与平台活动，设置秒杀/闪购"
-        },
-        {
-          "label": "平台任务",
-          "pct": 0,
-          "note": "完成平台成长任务领取奖励"
-        },
-        {
-          "label": "折扣优惠设置",
-          "pct": 0,
-          "note": "设置优惠券/满减/多件折扣"
+          "note": "今日点击 0"
         }
       ]
     },
     {
       "name": "菲律宾店2",
       "country": "ph",
+      "countryLabel": "菲律宾",
       "owner": "欧阳林",
       "health": "green",
+      "status": "正常运营",
+      "dailyClicks": 0,
+      "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
-          "label": "店铺数据监测",
+          "label": "平台任务",
           "pct": 0,
           "note": "每日记录曝光/点击/成交/加购"
         },
         {
-          "label": "营销活动",
+          "label": "每日点击",
           "pct": 0,
-          "note": "参与平台活动，设置秒杀/闪购"
-        },
-        {
-          "label": "平台任务",
-          "pct": 0,
-          "note": "完成平台成长任务领取奖励"
-        },
-        {
-          "label": "折扣优惠设置",
-          "pct": 0,
-          "note": "设置优惠券/满减/多件折扣"
+          "note": "今日点击 0"
         }
       ]
     }
@@ -1344,6 +1646,55 @@ function renderOverview() {
   document.getElementById("overviewCards").innerHTML = html;
 }
 
+/** 渲染今日工作进展 */
+function renderDailyProgress() {
+  var area = document.getElementById("dailyProgress");
+  var progress = dashboardData.dailyProgress || { summary: {}, items: [] };
+  var summary = progress.summary || {};
+  var items = progress.items || [];
+  var html = '<div class="daily-head">';
+  html += '<div><div class="daily-title">今日任务推进</div>';
+  html += '<div class="daily-subtitle">' + (progress.date || dashboardData.updateTime) + '｜只展示相对上次同步发生变化的任务</div></div>';
+  html += '<div class="daily-summary">';
+  html += '<span class="daily-pill">变化 ' + (summary.totalChanges || items.length || 0) + ' 项</span>';
+  html += '<span class="daily-pill">进度提升 ' + (summary.progressIncreased || 0) + ' 项</span>';
+  html += '<span class="daily-pill">需支持 ' + (summary.needSupport || 0) + ' 项</span>';
+  html += '</div></div>';
+
+  if (!items.length) {
+    html += '<div class="daily-empty">本次同步暂未发现新的任务进度变化。日常改动会在下一次同步后自动出现在这里。</div>';
+    area.innerHTML = html;
+    return;
+  }
+
+  html += '<div class="daily-list">';
+  items.forEach(function(item) {
+    var typeText = item.type === "progress" ? "进度提升" :
+      (item.type === "support" ? "需要支持" :
+      (item.type === "risk" ? "延期风险" :
+      (item.type === "new" ? "新增跟进" : "状态变化")));
+    html += '<div class="daily-item ' + item.type + '">';
+    html += '<div class="daily-meta">';
+    html += '<span class="daily-tag">' + typeText + '</span>';
+    html += '<span class="daily-tag">' + (item.priority || "P") + '</span>';
+    if (item.module) html += '<span class="daily-tag">' + item.module + '</span>';
+    html += '</div>';
+    html += '<div class="daily-task-name">' + item.taskNo + '｜' + item.name + '</div>';
+    html += '<div class="daily-change">';
+    if (item.type === "progress" || item.type === "new") {
+      html += item.owner + '：完成量从 ' + item.beforeActual + item.unit + ' 提升到 <strong>' + item.afterActual + item.unit + '</strong>';
+      html += '，完成率 ' + item.beforeRate + '% → <strong>' + item.afterRate + '%</strong>';
+    } else {
+      html += item.owner + '：状态从 ' + (item.beforeStatus || "未记录") + ' 更新为 <strong>' + item.afterStatus + '</strong>';
+    }
+    html += '</div>';
+    html += '<div class="daily-bar"><div class="daily-bar-fill" style="width:' + item.afterRate + '%"></div></div>';
+    html += '</div>';
+  });
+  html += '</div>';
+  area.innerHTML = html;
+}
+
 /** 渲染店铺运营状态卡片 */
 function renderStores() {
   var html = "";
@@ -1359,6 +1710,10 @@ function renderStores() {
     html += '<span class="store-country ' + countryCls + '">' + countryLabel + '</span>';
     html += '</div>';
     html += '<div class="store-owner">负责人：<strong>' + store.owner + '</strong></div>';
+    html += '<div class="store-metrics">';
+    html += '<div class="store-metric"><div class="store-metric-label">每日点击</div><div class="store-metric-value">' + (store.dailyClicks || 0) + '</div></div>';
+    html += '<div class="store-metric"><div class="store-metric-label">店铺状态</div><div class="store-metric-value" style="font-size:16px;">' + (store.status || healthLabel) + '</div></div>';
+    html += '</div>';
 
     store.tasks.forEach(function(task) {
       var barCls = task.pct >= 100 ? "green" : (task.pct >= 30 ? "orange" : (task.pct > 0 ? "orange" : "gray"));
@@ -1567,6 +1922,7 @@ function applyFilters() {
 function init() {
   renderHeader();
   renderOverview();
+  renderDailyProgress();
   renderStores();
   renderPersonCards();
   renderKPITable();
