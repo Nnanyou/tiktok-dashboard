@@ -273,6 +273,43 @@ body {
   border: 1px dashed #cbd5e1;
   font-weight: 700;
 }
+.new-task-window {
+  margin-top: 18px;
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  border-radius: 8px;
+  padding: 16px;
+}
+.new-task-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1d4ed8;
+  margin-bottom: 12px;
+}
+.new-task-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.new-task-card {
+  background: #fff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 13px;
+}
+.new-task-name {
+  font-weight: 800;
+  color: #172033;
+  margin-bottom: 8px;
+}
+.new-task-meta {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.7;
+}
 
 /* ============================================================
    双栏布局 - 个人KPI卡片
@@ -799,7 +836,7 @@ body {
 const dashboardData = {
   "month": "2026年7月",
   "subtitle": "商品测试、内容产能、剪辑外包与核心工作流验证",
-  "updateTime": "2026-07-15 16:48",
+  "updateTime": "2026-07-15 17:12",
   "updatePeriod": "每30分钟自动同步",
   "dataSource": "飞书多维表格「2026年7月月度KPI验收表」+「月度任务（半月）」+「店铺运营看板」",
   "overview": [
@@ -807,7 +844,7 @@ const dashboardData = {
       "key": "kpiPass",
       "label": "KPI达标数",
       "actual": 0,
-      "target": 18,
+      "target": 20,
       "unit": "项"
     },
     {
@@ -1044,6 +1081,28 @@ const dashboardData = {
       "unit": "项",
       "status": "进行中",
       "note": "欧阳林从内容角度参与选品判断，评估商品是否适合短视频展示、素材是否容易获得、卖点是否容易表达"
+    },
+    {
+      "id": "2026-07-G07",
+      "name": "菲律宾两家店铺正常运营",
+      "owner": "葛宗尚",
+      "target": 2.0,
+      "actual": 0.0,
+      "progressPercent": 0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "正常客服，正常任务，正常消息"
+    },
+    {
+      "id": "2026-07-G07",
+      "name": "马来两家店铺正常运营",
+      "owner": "欧阳林",
+      "target": 2.0,
+      "actual": 0.0,
+      "progressPercent": 0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "正常客服，正常任务，正常消息"
     }
   ],
   "personKPIs": {
@@ -1146,6 +1205,15 @@ const dashboardData = {
         "unit": "项",
         "note": "完成发票统计、设备刷机维护、IP环境管理、合作商寻找与对接等日常运维工作",
         "kpiRef": "2026-07-G06"
+      },
+      {
+        "name": "菲律宾两家店铺正常运营",
+        "target": 2.0,
+        "actual": 0.0,
+        "progressPercent": 0,
+        "unit": "项",
+        "note": "正常客服，正常任务，正常消息",
+        "kpiRef": "2026-07-G07"
       }
     ],
     "欧阳林": [
@@ -1220,6 +1288,15 @@ const dashboardData = {
         "unit": "项",
         "note": "欧阳林从内容角度参与选品判断，评估商品是否适合短视频展示、素材是否容易获得、卖点是否容易表达",
         "kpiRef": "2026-07-O06"
+      },
+      {
+        "name": "马来两家店铺正常运营",
+        "target": 2.0,
+        "actual": 0.0,
+        "progressPercent": 0,
+        "unit": "项",
+        "note": "正常客服，正常任务，正常消息",
+        "kpiRef": "2026-07-G07"
       }
     ]
   },
@@ -1311,7 +1388,8 @@ const dashboardData = {
       "葛宗尚": [],
       "欧阳林": [],
       "共同任务": []
-    }
+    },
+    "newTasks": []
   },
   "nonCompliance": [],
   "supportRequests": {
@@ -1588,6 +1666,22 @@ function renderDailyProgress() {
     html += '</div>';
   });
   html += '</div>';
+
+  var newTasks = progress.newTasks || [];
+  if (newTasks.length) {
+    html += '<div class="new-task-window">';
+    html += '<div class="new-task-title"><span>新增任务</span><span class="daily-group-count">' + newTasks.length + ' 条</span></div>';
+    html += '<div class="new-task-list">';
+    newTasks.forEach(function(task) {
+      html += '<div class="new-task-card">';
+      html += '<div class="new-task-name">' + task.taskNo + '｜' + task.name + '</div>';
+      html += '<div class="new-task-meta">负责人：' + (task.owner || "-") + (task.collaborator ? '｜协作：' + task.collaborator : '') + '</div>';
+      html += '<div class="new-task-meta">模块：' + (task.module || "-") + '｜优先级：' + (task.priority || "-") + '｜截止：' + (task.deadline || "-") + '</div>';
+      html += '<div class="new-task-meta">目标：' + task.target + task.unit + '｜状态：' + (task.afterStatus || "-") + '</div>';
+      html += '</div>';
+    });
+    html += '</div></div>';
+  }
   area.innerHTML = html;
 }
 
