@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok跨境电商部门月度经营进度 — 2026年7月</title>
+<style>
+/* ============================================================
+   全局重置与基础样式
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.container { max-width: 1400px; margin: 0 auto; padding: 20px 24px; }
+
+/* ============================================================
+   顶部标题区
+   ============================================================ */
+.header {
+  background: #1a3350;
+  color: #fff;
+  padding: 28px 36px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.header-left h1 { font-size: 30px; font-weight: 700; letter-spacing: 1px; }
+.header-left .subtitle { font-size: 17px; opacity: 0.85; margin-top: 6px; }
+.header-right { text-align: right; flex-shrink: 0; }
+.header-right .month-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.header-right .update-time { font-size: 14px; opacity: 0.7; display: block; }
+.btn-print {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 20px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-print:hover { background: rgba(255,255,255,0.3); }
+
+/* ============================================================
+   筛选栏
+   ============================================================ */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-bar label { font-size: 15px; font-weight: 600; color: #555; }
+.filter-bar select {
+  padding: 8px 14px;
+  border: 1px solid #c8ced6;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #fff;
+  color: #1a1a2e;
+  min-width: 120px;
+}
+
+/* ============================================================
+   区块标题
+   ============================================================ */
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a3350;
+  margin: 28px 0 14px;
+  padding-left: 14px;
+  border-left: 5px solid #1a3350;
+}
+
+/* ============================================================
+   部门总览 - 6张大号数据卡片
+   ============================================================ */
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.overview-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 18px 18px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-top: 4px solid #1a3350;
+}
+.overview-card .oc-number {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a3350;
+  line-height: 1.2;
+}
+.overview-card .oc-label {
+  font-size: 15px;
+  color: #666;
+  margin-top: 6px;
+}
+.overview-card .oc-bar {
+  height: 6px;
+  background: #e8ecf1;
+  border-radius: 3px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.overview-card .oc-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s;
+}
+/* 状态颜色 */
+.oc-green  .oc-number { color: #1a7a34; }
+.oc-green  .oc-bar-fill { background: #28a745; }
+.oc-red    .oc-number { color: #c72a2a; }
+.oc-red    .oc-bar-fill { background: #dc3545; }
+.oc-orange .oc-number { color: #b86e0e; }
+.oc-orange .oc-bar-fill { background: #f0a030; }
+.oc-gray   .oc-number { color: #6c757d; }
+.oc-gray   .oc-bar-fill { background: #adb5bd; }
+
+/* ============================================================
+   双栏布局 - 个人KPI卡片
+   ============================================================ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.panel {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #eef1f5;
+}
+.panel-title { font-size: 20px; font-weight: 700; color: #1a3350; }
+.panel-role { font-size: 14px; color: #888; margin-top: 2px; }
+.panel-badge {
+  background: #eef1f5;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3350;
+  white-space: nowrap;
+}
+
+/* 个人KPI列表项 */
+.person-kpi-item {
+  padding: 13px 0;
+  border-bottom: 1px solid #f0f2f5;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.person-kpi-item:last-child { border-bottom: none; }
+.person-kpi-item:hover { background: #f8fafc; margin: 0 -8px; padding-left: 8px; padding-right: 8px; border-radius: 6px; }
+.pkpi-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pkpi-name { flex: 1; font-size: 16px; font-weight: 600; color: #222; min-width: 0; }
+.pkpi-target { width: 70px; text-align: center; font-size: 14px; color: #888; flex-shrink: 0; }
+.pkpi-actual { width: 60px; text-align: center; font-size: 18px; font-weight: 700; color: #1a3350; flex-shrink: 0; }
+.pkpi-rate  { width: 65px; text-align: center; font-size: 14px; font-weight: 600; flex-shrink: 0; }
+.pkpi-status { width: 75px; text-align: center; flex-shrink: 0; }
+.pkpi-note {
+  display: none;
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
+  padding-left: 4px;
+  border-left: 3px solid #e0e4e8;
+}
+.pkpi-note.show { display: block; }
+
+/* ============================================================
+   状态标签
+   ============================================================ */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge-green  { background: #d4edda; color: #155724; }
+.badge-red    { background: #f8d7da; color: #721c24; }
+.badge-orange { background: #fff3cd; color: #856404; }
+.badge-gray   { background: #e9ecef; color: #495057; }
+
+/* 阻塞标记 */
+.blocked-icon {
+  display: inline-block;
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+/* ============================================================
+   KPI总表
+   ============================================================ */
+.table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+.data-table th {
+  background: #eef1f5;
+  padding: 13px 14px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a3350;
+  border-bottom: 2px solid #d5dbe3;
+  white-space: nowrap;
+}
+.data-table td {
+  padding: 12px 14px;
+  font-size: 15px;
+  border-bottom: 1px solid #f0f2f5;
+  vertical-align: middle;
+}
+.data-table tbody tr:hover { background: #f8fafc; }
+.data-table .col-center { text-align: center; }
+.data-table .col-narrow { width: 70px; }
+
+/* 进度小条（表格内） */
+.mini-bar {
+  display: inline-block;
+  width: 70px;
+  height: 6px;
+  background: #e8ecf1;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 6px;
+  overflow: hidden;
+}
+.mini-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+.mini-bar-fill.green  { background: #28a745; }
+.mini-bar-fill.red    { background: #dc3545; }
+.mini-bar-fill.orange { background: #f0a030; }
+.mini-bar-fill.gray   { background: #adb5bd; }
+
+/* ============================================================
+   P0任务表
+   ============================================================ */
+.p0-table { min-width: 800px; }
+
+/* ============================================================
+   成果卡片
+   ============================================================ */
+.achievement-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.achieve-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 4px solid #1a3350;
+}
+.achieve-card .achieve-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.achieve-card .achieve-tag.done     { background: #d4edda; color: #155724; }
+.achieve-card .achieve-tag.progress { background: #fff3cd; color: #856404; }
+.achieve-card .achieve-text { font-size: 17px; font-weight: 600; color: #1a1a2e; }
+
+/* ============================================================
+   未达标区域
+   ============================================================ */
+.noncompliance-panel {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 5px solid #dc3545;
+}
+.nc-table { min-width: 750px; }
+.nc-none {
+  text-align: center;
+  padding: 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+/* ============================================================
+   需要老板支持
+   ============================================================ */
+.support-panel {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.support-none {
+  text-align: center;
+  padding: 24px;
+  font-size: 17px;
+  color: #666;
+}
+.support-items { list-style: none; }
+.support-items li {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  align-items: baseline;
+}
+.support-items li:last-child { border-bottom: none; }
+.support-label { font-weight: 700; color: #555; white-space: nowrap; }
+.support-value { color: #1a1a2e; }
+
+/* ============================================================
+   底部
+   ============================================================ */
+.footer {
+  text-align: center;
+  padding: 24px 0;
+  color: #999;
+  font-size: 14px;
+  border-top: 1px solid #e0e4e8;
+  margin-top: 24px;
+}
+
+/* ============================================================
+   打印样式
+   ============================================================ */
+@media print {
+  body { background: #fff; font-size: 14px; }
+  .container { max-width: 100%; padding: 0; }
+  .filter-bar, .btn-print, .header-right .btn-print { display: none !important; }
+  .header { background: #1a3350 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .overview-cards { grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .overview-card { padding: 12px 10px; }
+  .overview-card .oc-number { font-size: 24px; }
+  .two-col { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .section-title { font-size: 18px; margin: 18px 0 10px; }
+  .panel { break-inside: avoid; }
+  .table-wrap { overflow-x: visible; }
+  @page { size: A4 landscape; margin: 12mm; }
+}
+
+/* ============================================================
+   店铺运营状态卡片
+   ============================================================ */
+.store-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.store-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-top: 4px solid #1a3350;
+}
+.store-card.store-my { border-top-color: #2d5a8a; }
+.store-card.store-ph { border-top-color: #1a6b4a; }
+.store-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eef1f5;
+}
+.store-name { font-size: 17px; font-weight: 700; color: #1a3350; }
+.store-country {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #fff;
+}
+.store-country.my { background: #2d5a8a; }
+.store-country.ph { background: #1a6b4a; }
+.store-owner { font-size: 13px; color: #888; margin-bottom: 12px; }
+.store-owner strong { color: #555; }
+
+.store-task-item {
+  margin-bottom: 11px;
+}
+.store-task-item:last-child { margin-bottom: 0; }
+.store-task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.store-task-label { font-size: 14px; color: #333; font-weight: 500; }
+.store-task-pct { font-size: 13px; font-weight: 600; color: #1a3350; }
+.store-task-bar {
+  height: 5px;
+  background: #e8ecf1;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.store-task-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s;
+}
+.store-task-bar-fill.green  { background: #28a745; }
+.store-task-bar-fill.orange { background: #f0a030; }
+.store-task-bar-fill.red    { background: #dc3545; }
+.store-task-bar-fill.gray   { background: #adb5bd; }
+.store-task-note { font-size: 12px; color: #999; margin-top: 2px; }
+
+.store-health {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eef1f5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.store-health-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.store-health-dot.green  { background: #28a745; }
+.store-health-dot.orange { background: #f0a030; }
+.store-health-dot.red    { background: #dc3545; }
+
+/* ============================================================
+   响应式
+   ============================================================ */
+@media (max-width: 1200px) {
+  .overview-cards { grid-template-columns: repeat(3, 1fr); }
+  .store-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .header { padding: 20px; }
+  .header-left h1 { font-size: 24px; }
+  .header-left .subtitle { font-size: 15px; }
+  .overview-cards { grid-template-columns: repeat(2, 1fr); }
+  .overview-card .oc-number { font-size: 28px; }
+  .two-col { grid-template-columns: 1fr; }
+  .store-cards { grid-template-columns: 1fr 1fr; }
+  .achievement-cards { grid-template-columns: 1fr; }
+  .container { padding: 12px; }
+}
+@media (max-width: 480px) {
+  .overview-cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .overview-card { padding: 14px 10px; }
+  .overview-card .oc-number { font-size: 26px; }
+  .header-left h1 { font-size: 22px; }
+  .pkpi-main { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="app">
+
+  <!-- ============================================================
+       顶部标题区（由JS动态渲染）
+       ============================================================ -->
+  <div class="header">
+    <div class="header-left">
+      <h1 id="header-title"></h1>
+      <div class="subtitle" id="header-subtitle"></div>
+    </div>
+    <div class="header-right">
+      <span class="month-badge" id="header-month"></span>
+      <span class="update-time" id="header-update"></span>
+      <button class="btn-print" onclick="window.print()">打印 / 导出PDF</button>
+    </div>
+  </div>
+
+  <!-- 筛选栏 -->
+  <div class="filter-bar">
+    <label>负责人：</label>
+    <select id="filterOwner">
+      <option value="all">全部</option>
+      <option value="葛宗尚">葛宗尚</option>
+      <option value="欧阳林">欧阳林</option>
+      <option value="共同负责">共同负责</option>
+    </select>
+    <label>状态：</label>
+    <select id="filterStatus">
+      <option value="all">全部</option>
+      <option value="已达标">已达标</option>
+      <option value="未达标">未达标</option>
+      <option value="进行中">进行中</option>
+      <option value="未开始">未开始</option>
+    </select>
+  </div>
+
+  <!-- ============================================================
+       部门本月总览（6张大号数据卡片）
+       ============================================================ -->
+  <div class="section-title">部门本月总览</div>
+  <div class="overview-cards" id="overviewCards"></div>
+
+  <!-- ============================================================
+       店铺运营状态（4家店 × 4项运营指标）
+       ============================================================ -->
+  <div class="section-title">店铺运营状态</div>
+  <div class="store-cards" id="storeCards"></div>
+
+  <!-- ============================================================
+       个人KPI卡片（双栏）
+       ============================================================ -->
+  <div class="section-title">个人KPI</div>
+  <div class="two-col" id="personCards"></div>
+
+  <!-- ============================================================
+       本月核心KPI总表
+       ============================================================ -->
+  <div class="section-title">本月核心KPI总表</div>
+  <div class="table-wrap">
+    <table class="data-table" id="kpiTable">
+      <thead>
+        <tr>
+          <th>编号</th>
+          <th>KPI名称</th>
+          <th>主负责人</th>
+          <th>目标值</th>
+          <th>实际值</th>
+          <th>完成率</th>
+          <th>状态</th>
+          <th>达标</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       本周P0任务
+       ============================================================ -->
+  <div class="section-title">本周P0任务</div>
+  <div class="table-wrap">
+    <table class="data-table p0-table" id="p0Table">
+      <thead>
+        <tr>
+          <th>任务名称</th>
+          <th>负责人</th>
+          <th>本周目标</th>
+          <th>实际完成</th>
+          <th>状态</th>
+          <th>截止日期</th>
+          <th>阻塞</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================
+       未达标事项与整改
+       ============================================================ -->
+  <div class="section-title">未达标事项与整改</div>
+  <div id="noncomplianceArea"></div>
+
+  <!-- ============================================================
+       本月关键成果
+       ============================================================ -->
+  <div class="section-title">本月关键成果</div>
+  <div class="achievement-cards" id="achievementCards"></div>
+
+  <!-- ============================================================
+       需要老板支持
+       ============================================================ -->
+  <div class="section-title">需要老板支持</div>
+  <div id="supportArea"></div>
+
+  <!-- 底部 -->
+  <div class="footer" id="footerText"></div>
+</div>
+
+<script>
+/* ============================================================
+   数据定义 —— 修改以下对象即可更新整个页面
+   ============================================================ */
+const dashboardData = {
+  "month": "2026年7月",
+  "subtitle": "商品测试、内容产能、剪辑外包与核心工作流验证",
+  "updateTime": "2026-07-15 09:13",
+  "updatePeriod": "每30分钟自动同步",
+  "dataSource": "飞书多维表格「2026年7月月度KPI验收表」+「周度任务执行追踪」",
+  "overview": [
+    {
+      "key": "kpiPass",
+      "label": "KPI达标数",
+      "actual": 0,
+      "target": 18,
+      "unit": "项"
+    },
+    {
+      "key": "tested",
+      "label": "有效测试商品",
+      "actual": 0.0,
+      "target": 12,
+      "unit": "款"
+    },
+    {
+      "key": "potential",
+      "label": "潜力商品",
+      "actual": 0.0,
+      "target": 2,
+      "unit": "款"
+    },
+    {
+      "key": "videos",
+      "label": "实际发布视频",
+      "actual": 0.0,
+      "target": 80,
+      "unit": "条"
+    },
+    {
+      "key": "outsource",
+      "label": "稳定剪辑外包",
+      "actual": 0.0,
+      "target": 1,
+      "unit": "人"
+    },
+    {
+      "key": "workflow",
+      "label": "核心工作流完成",
+      "actual": 0,
+      "target": 2,
+      "unit": "项"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "2026-07-D01",
+      "name": "4家店铺安全稳定运营",
+      "owner": "葛宗尚",
+      "target": 4.0,
+      "actual": 0.0,
+      "unit": "家",
+      "status": "进行中",
+      "note": "确保马来西亚2家、菲律宾2家TikTok Shop店铺在7月份保持正常运营，不发生重大账号、网络、商品或合规事故"
+    },
+    {
+      "id": "2026-07-D02",
+      "name": "找到潜力商品或明确成交信号",
+      "owner": "葛宗尚, 欧阳林",
+      "target": 2.0,
+      "actual": 0.0,
+      "unit": "款",
+      "status": "进行中",
+      "note": "从本月测试商品中找到1—2款值得进入下一阶段持续投入的商品，并争取获得首单"
+    },
+    {
+      "id": "2026-07-D03",
+      "name": "建立稳定内容生产与发布体系（团队整体）",
+      "owner": "欧阳林",
+      "target": 80.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "建立从内容方向、脚本、素材、剪辑、审核、发布到数据记录的稳定视频生产流水线，团队整体完成目标"
+    },
+    {
+      "id": "2026-07-D04",
+      "name": "视频AI生成工作流完成MVP",
+      "owner": "葛宗尚",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "打通视频AI生成工作流的最小可用链路，并投入真实内容生产测试"
+    },
+    {
+      "id": "2026-07-D05",
+      "name": "达人建联工作流完成MVP",
+      "owner": "葛宗尚",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "完成达人建联工作流最小可用版本，并用真实达人名单完成一次实际建联测试"
+    },
+    {
+      "id": "2026-07-D06",
+      "name": "完成轻出海选品与自动上品验证",
+      "owner": "葛宗尚",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "次",
+      "status": "进行中",
+      "note": "安排一个完整工作日完成轻出海选品，并将结果交给自动上品流程完成验证"
+    },
+    {
+      "id": "2026-07-G01",
+      "name": "完成第一轮商品有效测试",
+      "owner": "葛宗尚",
+      "target": 12.0,
+      "actual": 0.0,
+      "unit": "款",
+      "status": "进行中",
+      "note": "完成10—12款商品的完整内容与转化测试，并对每款商品形成继续、调整、追加或淘汰结论"
+    },
+    {
+      "id": "2026-07-G02",
+      "name": "建立稳定剪辑外包能力",
+      "owner": "葛宗尚",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "人",
+      "status": "进行中",
+      "note": "完成剪辑外包招聘、试单、筛选和试合作，留下至少1名稳定主剪辑和1名备用候选"
+    },
+    {
+      "id": "2026-07-G03",
+      "name": "视频拍摄（葛宗尚）",
+      "owner": "葛宗尚",
+      "target": 8.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "葛宗尚个人完成拍摄视频8条，用于自己负责的2家店铺内容补充"
+    },
+    {
+      "id": "2026-07-G04",
+      "name": "视频剪辑（葛宗尚）",
+      "owner": "葛宗尚",
+      "target": 12.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "葛宗尚个人完成视频剪辑12条，用于自己负责的2家店铺发布"
+    },
+    {
+      "id": "2026-07-G05",
+      "name": "选品上品与利润检查（葛宗尚）",
+      "owner": "葛宗尚",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "葛宗尚主导完成选品初筛、人工复核、利润检查和上架决策，确保商品测试有序推进"
+    },
+    {
+      "id": "2026-07-G06",
+      "name": "日常运维工作（葛宗尚）",
+      "owner": "葛宗尚",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "完成发票统计、设备刷机维护、IP环境管理、合作商寻找与对接等日常运维工作"
+    },
+    {
+      "id": "2026-07-O01",
+      "name": "可复用内容公式和复盘机制",
+      "owner": "欧阳林",
+      "target": 3.0,
+      "actual": 0.0,
+      "unit": "套",
+      "status": "进行中",
+      "note": "通过数据复盘找到可持续复用的前三秒、视频结构和商品表达方式"
+    },
+    {
+      "id": "2026-07-O02",
+      "name": "视频拍摄（欧阳林）",
+      "owner": "欧阳林",
+      "target": 40.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "欧阳林完成拍摄视频40条，作为内容生产的主力拍摄"
+    },
+    {
+      "id": "2026-07-O03",
+      "name": "视频剪辑（欧阳林）",
+      "owner": "欧阳林",
+      "target": 80.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "欧阳林完成视频剪辑80条，作为内容生产的主力剪辑"
+    },
+    {
+      "id": "2026-07-O04",
+      "name": "视频发布（欧阳林负责店铺）",
+      "owner": "欧阳林",
+      "target": 65.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "欧阳林在自己负责的2家店铺完成视频发布65条，并保持稳定发布节奏"
+    },
+    {
+      "id": "2026-07-O05",
+      "name": "内容脚本产出与外包审核（欧阳林）",
+      "owner": "欧阳林",
+      "target": 45.0,
+      "actual": 0.0,
+      "unit": "条",
+      "status": "进行中",
+      "note": "完成40—50条可执行视频脚本，并建立外包视频审核标准，确保外包产出质量"
+    },
+    {
+      "id": "2026-07-O06",
+      "name": "选品内容适配判断（欧阳林）",
+      "owner": "欧阳林",
+      "target": 1.0,
+      "actual": 0.0,
+      "unit": "项",
+      "status": "进行中",
+      "note": "欧阳林从内容角度参与选品判断，评估商品是否适合短视频展示、素材是否容易获得、卖点是否容易表达"
+    }
+  ],
+  "personKPIs": {
+    "葛宗尚": [
+      {
+        "name": "4家店铺安全稳定运营",
+        "target": 4.0,
+        "actual": 0.0,
+        "unit": "家",
+        "note": "确保马来西亚2家、菲律宾2家TikTok Shop店铺在7月份保持正常运营，不发生重大账号、网络、商品或合规事故",
+        "kpiRef": "2026-07-D01"
+      },
+      {
+        "name": "找到潜力商品或明确成交信号",
+        "target": 2.0,
+        "actual": 0.0,
+        "unit": "款",
+        "note": "从本月测试商品中找到1—2款值得进入下一阶段持续投入的商品，并争取获得首单",
+        "kpiRef": "2026-07-D02"
+      },
+      {
+        "name": "视频AI生成工作流完成MVP",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "项",
+        "note": "打通视频AI生成工作流的最小可用链路，并投入真实内容生产测试",
+        "kpiRef": "2026-07-D04"
+      },
+      {
+        "name": "达人建联工作流完成MVP",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "项",
+        "note": "完成达人建联工作流最小可用版本，并用真实达人名单完成一次实际建联测试",
+        "kpiRef": "2026-07-D05"
+      },
+      {
+        "name": "完成轻出海选品与自动上品验证",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "次",
+        "note": "安排一个完整工作日完成轻出海选品，并将结果交给自动上品流程完成验证",
+        "kpiRef": "2026-07-D06"
+      },
+      {
+        "name": "完成第一轮商品有效测试",
+        "target": 12.0,
+        "actual": 0.0,
+        "unit": "款",
+        "note": "完成10—12款商品的完整内容与转化测试，并对每款商品形成继续、调整、追加或淘汰结论",
+        "kpiRef": "2026-07-G01"
+      },
+      {
+        "name": "建立稳定剪辑外包能力",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "人",
+        "note": "完成剪辑外包招聘、试单、筛选和试合作，留下至少1名稳定主剪辑和1名备用候选",
+        "kpiRef": "2026-07-G02"
+      },
+      {
+        "name": "视频拍摄（葛宗尚）",
+        "target": 8.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "葛宗尚个人完成拍摄视频8条，用于自己负责的2家店铺内容补充",
+        "kpiRef": "2026-07-G03"
+      },
+      {
+        "name": "视频剪辑（葛宗尚）",
+        "target": 12.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "葛宗尚个人完成视频剪辑12条，用于自己负责的2家店铺发布",
+        "kpiRef": "2026-07-G04"
+      },
+      {
+        "name": "选品上品与利润检查（葛宗尚）",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "项",
+        "note": "葛宗尚主导完成选品初筛、人工复核、利润检查和上架决策，确保商品测试有序推进",
+        "kpiRef": "2026-07-G05"
+      },
+      {
+        "name": "日常运维工作（葛宗尚）",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "项",
+        "note": "完成发票统计、设备刷机维护、IP环境管理、合作商寻找与对接等日常运维工作",
+        "kpiRef": "2026-07-G06"
+      }
+    ],
+    "欧阳林": [
+      {
+        "name": "找到潜力商品或明确成交信号",
+        "target": 2.0,
+        "actual": 0.0,
+        "unit": "款",
+        "note": "从本月测试商品中找到1—2款值得进入下一阶段持续投入的商品，并争取获得首单",
+        "kpiRef": "2026-07-D02"
+      },
+      {
+        "name": "建立稳定内容生产与发布体系（团队整体）",
+        "target": 80.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "建立从内容方向、脚本、素材、剪辑、审核、发布到数据记录的稳定视频生产流水线，团队整体完成目标",
+        "kpiRef": "2026-07-D03"
+      },
+      {
+        "name": "可复用内容公式和复盘机制",
+        "target": 3.0,
+        "actual": 0.0,
+        "unit": "套",
+        "note": "通过数据复盘找到可持续复用的前三秒、视频结构和商品表达方式",
+        "kpiRef": "2026-07-O01"
+      },
+      {
+        "name": "视频拍摄（欧阳林）",
+        "target": 40.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "欧阳林完成拍摄视频40条，作为内容生产的主力拍摄",
+        "kpiRef": "2026-07-O02"
+      },
+      {
+        "name": "视频剪辑（欧阳林）",
+        "target": 80.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "欧阳林完成视频剪辑80条，作为内容生产的主力剪辑",
+        "kpiRef": "2026-07-O03"
+      },
+      {
+        "name": "视频发布（欧阳林负责店铺）",
+        "target": 65.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "欧阳林在自己负责的2家店铺完成视频发布65条，并保持稳定发布节奏",
+        "kpiRef": "2026-07-O04"
+      },
+      {
+        "name": "内容脚本产出与外包审核（欧阳林）",
+        "target": 45.0,
+        "actual": 0.0,
+        "unit": "条",
+        "note": "完成40—50条可执行视频脚本，并建立外包视频审核标准，确保外包产出质量",
+        "kpiRef": "2026-07-O05"
+      },
+      {
+        "name": "选品内容适配判断（欧阳林）",
+        "target": 1.0,
+        "actual": 0.0,
+        "unit": "项",
+        "note": "欧阳林从内容角度参与选品判断，评估商品是否适合短视频展示、素材是否容易获得、卖点是否容易表达",
+        "kpiRef": "2026-07-O06"
+      }
+    ]
+  },
+  "weeklyP0": [
+    {
+      "name": "【葛宗尚】店铺状态检查",
+      "owner": "葛宗尚",
+      "weekTarget": "1",
+      "actual": "0",
+      "status": "未开始",
+      "deadline": "红线P0，每周固定检查",
+      "blocked": false
+    },
+    {
+      "name": "【葛宗尚】IP/设备异常记录",
+      "owner": "葛宗尚",
+      "weekTarget": "1",
+      "actual": "0",
+      "status": "未开始",
+      "deadline": "红线P0",
+      "blocked": false
+    },
+    {
+      "name": "【葛宗尚】初筛候选商品",
+      "owner": "葛宗尚",
+      "weekTarget": "30",
+      "actual": "0",
+      "status": "未开始",
+      "deadline": "月均120÷4周",
+      "blocked": false
+    },
+    {
+      "name": "【葛宗尚】人工复核商品",
+      "owner": "葛宗尚",
+      "weekTarget": "8",
+      "actual": "0",
+      "status": "未开始",
+      "deadline": "月均30÷4周",
+      "blocked": false
+    },
+    {
+      "name": "【葛宗尚】商品进入测试池",
+      "owner": "葛宗尚",
+      "weekTarget": "3",
+      "actual": "0",
+      "status": "未开始",
+      "deadline": "月均10÷4周",
+      "blocked": false
+    }
+  ],
+  "nonCompliance": [],
+  "supportRequests": {
+    "needed": false,
+    "items": []
+  },
+  "stores": [
+    {
+      "name": "马来西亚店1",
+      "country": "my",
+      "owner": "葛宗尚",
+      "health": "green",
+      "tasks": [
+        {
+          "label": "店铺数据监测",
+          "pct": 0,
+          "note": "每日记录曝光/点击/成交/加购"
+        },
+        {
+          "label": "营销活动",
+          "pct": 0,
+          "note": "参与平台活动，设置秒杀/闪购"
+        },
+        {
+          "label": "平台任务",
+          "pct": 0,
+          "note": "完成平台成长任务领取奖励"
+        },
+        {
+          "label": "折扣优惠设置",
+          "pct": 0,
+          "note": "设置优惠券/满减/多件折扣"
+        }
+      ]
+    },
+    {
+      "name": "马来西亚店2",
+      "country": "my",
+      "owner": "葛宗尚",
+      "health": "green",
+      "tasks": [
+        {
+          "label": "店铺数据监测",
+          "pct": 0,
+          "note": "每日记录曝光/点击/成交/加购"
+        },
+        {
+          "label": "营销活动",
+          "pct": 0,
+          "note": "参与平台活动，设置秒杀/闪购"
+        },
+        {
+          "label": "平台任务",
+          "pct": 0,
+          "note": "完成平台成长任务领取奖励"
+        },
+        {
+          "label": "折扣优惠设置",
+          "pct": 0,
+          "note": "设置优惠券/满减/多件折扣"
+        }
+      ]
+    },
+    {
+      "name": "菲律宾店1",
+      "country": "ph",
+      "owner": "欧阳林",
+      "health": "green",
+      "tasks": [
+        {
+          "label": "店铺数据监测",
+          "pct": 0,
+          "note": "每日记录曝光/点击/成交/加购"
+        },
+        {
+          "label": "营销活动",
+          "pct": 0,
+          "note": "参与平台活动，设置秒杀/闪购"
+        },
+        {
+          "label": "平台任务",
+          "pct": 0,
+          "note": "完成平台成长任务领取奖励"
+        },
+        {
+          "label": "折扣优惠设置",
+          "pct": 0,
+          "note": "设置优惠券/满减/多件折扣"
+        }
+      ]
+    },
+    {
+      "name": "菲律宾店2",
+      "country": "ph",
+      "owner": "欧阳林",
+      "health": "green",
+      "tasks": [
+        {
+          "label": "店铺数据监测",
+          "pct": 0,
+          "note": "每日记录曝光/点击/成交/加购"
+        },
+        {
+          "label": "营销活动",
+          "pct": 0,
+          "note": "参与平台活动，设置秒杀/闪购"
+        },
+        {
+          "label": "平台任务",
+          "pct": 0,
+          "note": "完成平台成长任务领取奖励"
+        },
+        {
+          "label": "折扣优惠设置",
+          "pct": 0,
+          "note": "设置优惠券/满减/多件折扣"
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "tag": "已完成",
+      "tagClass": "done",
+      "text": "成功建立视频脚本和选品SOP"
+    },
+    {
+      "tag": "已推进",
+      "tagClass": "progress",
+      "text": "剪辑外包开始试单"
+    },
+    {
+      "tag": "进行中",
+      "tagClass": "progress",
+      "text": "视频AI与达人建联工作流开发"
+    }
+  ]
+};
+
+/* ============================================================
+   工具函数
+   ============================================================ */
+
+/** 计算完成率（上限100%） */
+function calcRate(actual, target) {
+  if (target === 0) return 0;
+  return Math.min(100, Math.round((actual / target) * 100));
+}
+
+/** 根据实际值和状态字段判断颜色主题 */
+function getColorClass(actual, target, status) {
+  if (status === "未达标") return "oc-red";
+  if (status === "未开始") return "oc-gray";
+  if (actual >= target && target > 0) return "oc-green";
+  if (actual > 0 && actual < target) return "oc-orange";
+  if (actual === 0 && status !== "已达标") return "oc-gray";
+  return "oc-orange";
+}
+
+/** 判断达标状态文字 */
+function getPassStatus(actual, target, status) {
+  if (status === "未达标") return "未达标";
+  if (status === "未开始") return "未开始";
+  if (actual >= target && target > 0) return "已达标";
+  if (actual > 0) return "进行中";
+  return "未开始";
+}
+
+/** 获取状态对应的badge class */
+function getBadgeClass(status) {
+  if (status === "已达标") return "badge-green";
+  if (status === "未达标") return "badge-red";
+  if (status === "进行中") return "badge-orange";
+  return "badge-gray";
+}
+
+/* ============================================================
+   渲染函数
+   ============================================================ */
+
+/** 渲染顶部标题 */
+function renderHeader() {
+  document.getElementById("header-title").textContent = "TikTok跨境电商部门月度经营进度";
+  document.getElementById("header-subtitle").textContent =
+    dashboardData.month + "｜" + dashboardData.subtitle;
+  document.getElementById("header-month").textContent = dashboardData.month;
+  document.getElementById("header-update").textContent =
+    "数据更新：" + dashboardData.updateTime + "（" + dashboardData.updatePeriod + "）";
+  document.getElementById("footerText").textContent =
+    "数据来源：" + dashboardData.dataSource + "｜数据由跨境电商部门内部维护，本页面仅用于月度经营汇报。｜更新于 " + dashboardData.updateTime;
+}
+
+/** 渲染部门总览6卡片 */
+function renderOverview() {
+  var html = "";
+  dashboardData.overview.forEach(function(card) {
+    var rate = calcRate(card.actual, card.target);
+    var status = getPassStatus(card.actual, card.target, "auto");
+    // 对于kpiPass，特殊处理：统计所有KPI中已达标数量
+    if (card.key === "kpiPass") {
+      var passed = dashboardData.kpis.filter(function(k) {
+        return getPassStatus(k.actual, k.target, k.status) === "已达标";
+      }).length;
+      card.actual = passed;
+      rate = calcRate(passed, card.target);
+      status = passed >= card.target ? "已达标" : (passed > 0 ? "进行中" : "未开始");
+    }
+    var cls = getColorClass(card.actual, card.target, status);
+    var displayActual = card.key === "kpiPass" ? card.actual : card.actual;
+    html += '<div class="overview-card ' + cls + '">';
+    html += '<div class="oc-number">' + displayActual + ' / ' + card.target + '</div>';
+    html += '<div class="oc-label">' + card.label + '</div>';
+    html += '<div class="oc-bar"><div class="oc-bar-fill" style="width:' + rate + '%"></div></div>';
+    html += '</div>';
+  });
+  document.getElementById("overviewCards").innerHTML = html;
+}
+
+/** 渲染店铺运营状态卡片 */
+function renderStores() {
+  var html = "";
+  dashboardData.stores.forEach(function(store) {
+    var countryLabel = store.country === "my" ? "马来西亚" : "菲律宾";
+    var countryCls = store.country === "my" ? "my" : "ph";
+    var healthLabel = store.health === "green" ? "正常运营" : (store.health === "orange" ? "需关注" : "异常");
+    var healthCls = store.health;
+
+    html += '<div class="store-card store-' + store.country + '">';
+    html += '<div class="store-card-header">';
+    html += '<span class="store-name">' + store.name + '</span>';
+    html += '<span class="store-country ' + countryCls + '">' + countryLabel + '</span>';
+    html += '</div>';
+    html += '<div class="store-owner">负责人：<strong>' + store.owner + '</strong></div>';
+
+    store.tasks.forEach(function(task) {
+      var barCls = task.pct >= 100 ? "green" : (task.pct >= 30 ? "orange" : (task.pct > 0 ? "orange" : "gray"));
+      var statusText = task.pct >= 100 ? "已完成" : (task.pct > 0 ? "进行中" : "未开始");
+      html += '<div class="store-task-item">';
+      html += '<div class="store-task-header">';
+      html += '<span class="store-task-label">' + task.label + '</span>';
+      html += '<span class="store-task-pct">' + task.pct + '% ' + statusText + '</span>';
+      html += '</div>';
+      html += '<div class="store-task-bar"><div class="store-task-bar-fill ' + barCls + '" style="width:' + task.pct + '%"></div></div>';
+      html += '<div class="store-task-note">' + (task.note || "") + '</div>';
+      html += '</div>';
+    });
+
+    html += '<div class="store-health">';
+    html += '<span class="store-health-dot ' + healthCls + '"></span>';
+    html += healthLabel;
+    html += '</div>';
+    html += '</div>';
+  });
+  document.getElementById("storeCards").innerHTML = html;
+}
+
+/** 渲染个人KPI卡片 */
+function renderPersonCards() {
+  var html = "";
+  var persons = [
+    { name: "葛宗尚", role: "商品与经营负责人 · 外包管理 · SaaS推进", kpis: dashboardData.personKPIs["葛宗尚"] },
+    { name: "欧阳林", role: "内容增长负责人 · 内容审核",               kpis: dashboardData.personKPIs["欧阳林"] }
+  ];
+
+  persons.forEach(function(p) {
+    var passed = p.kpis.filter(function(k) {
+      return getPassStatus(k.actual, k.target, "auto") === "已达标";
+    }).length;
+    html += '<div class="panel">';
+    html += '<div class="panel-header">';
+    html += '<div><div class="panel-title">' + p.name + ' 本月KPI</div>';
+    html += '<div class="panel-role">' + p.role + '</div></div>';
+    html += '<div class="panel-badge">已达标 ' + passed + ' / ' + p.kpis.length + ' 项</div>';
+    html += '</div>';
+
+    p.kpis.forEach(function(k, i) {
+      var rate = calcRate(k.actual, k.target);
+      var status = getPassStatus(k.actual, k.target, "auto");
+      var badgeCls = getBadgeClass(status);
+      var rateColor = rate >= 100 ? "#1a7a34" : (rate > 0 ? "#b86e0e" : "#6c757d");
+      html += '<div class="person-kpi-item" onclick="toggleNote(this)" data-note="' + (k.note || "") + '">';
+      html += '<div class="pkpi-main">';
+      html += '<span class="pkpi-name">' + k.name + '</span>';
+      html += '<span class="pkpi-target">目标：' + k.target + k.unit + '</span>';
+      html += '<span class="pkpi-actual">' + k.actual + k.unit + '</span>';
+      html += '<span class="pkpi-rate" style="color:' + rateColor + '">' + rate + '%</span>';
+      html += '<span class="pkpi-status"><span class="badge ' + badgeCls + '">' + status + '</span></span>';
+      html += '</div>';
+      if (k.note) {
+        html += '<div class="pkpi-note">' + k.note + '</div>';
+      }
+      html += '</div>';
+    });
+
+    html += '</div>';
+  });
+  document.getElementById("personCards").innerHTML = html;
+}
+
+/** 渲染KPI总表 */
+function renderKPITable() {
+  var tbody = document.querySelector("#kpiTable tbody");
+  var html = "";
+  dashboardData.kpis.forEach(function(k) {
+    var rate = calcRate(k.actual, k.target);
+    var passStatus = getPassStatus(k.actual, k.target, k.status);
+    var badgeCls = getBadgeClass(passStatus);
+    var passText = passStatus === "已达标" ? "是" : "否";
+    var passBadgeCls = passStatus === "已达标" ? "badge-green" : (passStatus === "未达标" ? "badge-red" : "badge-orange");
+    var barCls = passStatus === "已达标" ? "green" : (passStatus === "未达标" ? "red" : (passStatus === "进行中" ? "orange" : "gray"));
+
+    html += '<tr data-owner="' + k.owner + '" data-status="' + passStatus + '">';
+    html += '<td class="col-center col-narrow">' + k.id + '</td>';
+    html += '<td><strong>' + k.name + '</strong></td>';
+    html += '<td>' + k.owner + '</td>';
+    html += '<td class="col-center">' + k.target + k.unit + '</td>';
+    html += '<td class="col-center"><strong>' + k.actual + k.unit + '</strong></td>';
+    html += '<td class="col-center"><span class="mini-bar"><span class="mini-bar-fill ' + barCls + '" style="width:' + rate + '%"></span></span> ' + rate + '%</td>';
+    html += '<td class="col-center"><span class="badge ' + badgeCls + '">' + passStatus + '</span></td>';
+    html += '<td class="col-center"><span class="badge ' + passBadgeCls + '">' + passText + '</span></td>';
+    html += '<td style="font-size:14px;color:#888;">' + (k.note || "") + '</td>';
+    html += '</tr>';
+  });
+  tbody.innerHTML = html;
+}
+
+/** 渲染P0任务表 */
+function renderP0Table() {
+  var tbody = document.querySelector("#p0Table tbody");
+  var html = "";
+  dashboardData.weeklyP0.forEach(function(t) {
+    var badgeCls = getBadgeClass(t.status);
+    var blockedHtml = t.blocked ? '<span class="blocked-icon" title="阻塞">⚠</span>' : '<span style="color:#28a745;">-</span>';
+    html += '<tr data-owner="' + t.owner + '">';
+    html += '<td><strong>' + t.name + '</strong></td>';
+    html += '<td>' + t.owner + '</td>';
+    html += '<td>' + t.weekTarget + '</td>';
+    html += '<td>' + t.actual + '</td>';
+    html += '<td><span class="badge ' + badgeCls + '">' + t.status + '</span></td>';
+    html += '<td>' + t.deadline + '</td>';
+    html += '<td class="col-center">' + blockedHtml + '</td>';
+    html += '</tr>';
+  });
+  tbody.innerHTML = html;
+}
+
+/** 渲染未达标区域 */
+function renderNonCompliance() {
+  var area = document.getElementById("noncomplianceArea");
+  if (dashboardData.nonCompliance.length === 0) {
+    area.innerHTML = '<div class="noncompliance-panel"><div class="nc-none">本月暂无未达标KPI。<br><span style="font-size:15px;font-weight:normal;color:#888;">月底统一验收后将在此显示未达标项及整改计划</span></div></div>';
+    return;
+  }
+  var html = '<div class="noncompliance-panel"><div class="table-wrap"><table class="data-table nc-table"><thead><tr>';
+  html += '<th>KPI名称</th><th>负责人</th><th>未达标原因</th><th>整改动作</th><th>新截止日期</th><th>需老板支持</th>';
+  html += '</tr></thead><tbody>';
+  dashboardData.nonCompliance.forEach(function(nc) {
+    html += '<tr>';
+    html += '<td><strong>' + nc.kpiName + '</strong></td>';
+    html += '<td>' + nc.owner + '</td>';
+    html += '<td>' + nc.reason + '</td>';
+    html += '<td>' + nc.action + '</td>';
+    html += '<td>' + nc.newDeadline + '</td>';
+    html += '<td>' + (nc.needSupport || "不需要") + '</td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table></div></div>';
+  area.innerHTML = html;
+}
+
+/** 渲染成果卡片 */
+function renderAchievements() {
+  var html = "";
+  dashboardData.achievements.forEach(function(a) {
+    html += '<div class="achieve-card">';
+    html += '<div class="achieve-tag ' + a.tagClass + '">' + a.tag + '</div>';
+    html += '<div class="achieve-text">' + a.text + '</div>';
+    html += '</div>';
+  });
+  document.getElementById("achievementCards").innerHTML = html;
+}
+
+/** 渲染老板支持区域 */
+function renderSupport() {
+  var area = document.getElementById("supportArea");
+  if (!dashboardData.supportRequests.needed || dashboardData.supportRequests.items.length === 0) {
+    area.innerHTML = '<div class="support-panel"><div class="support-none">当前无需额外支持</div></div>';
+    return;
+  }
+  var html = '<div class="support-panel"><ul class="support-items">';
+  dashboardData.supportRequests.items.forEach(function(s) {
+    html += '<li>';
+    html += '<span><span class="support-label">支持类型：</span><span class="support-value">' + s.type + '</span></span>';
+    if (s.amount) html += '<span><span class="support-label">金额/人员：</span><span class="support-value">' + s.amount + '</span></span>';
+    html += '<span><span class="support-label">详情：</span><span class="support-value">' + s.detail + '</span></span>';
+    html += '<span><span class="support-label">希望决定：</span><span class="support-value">' + s.decision + '</span></span>';
+    html += '<span><span class="support-label">最晚决策：</span><span class="support-value" style="color:#dc3545;font-weight:600;">' + s.deadline + '</span></span>';
+    html += '</li>';
+  });
+  html += '</ul></div>';
+  area.innerHTML = html;
+}
+
+/** 点击展开KPI备注 */
+function toggleNote(el) {
+  var note = el.querySelector(".pkpi-note");
+  if (note) note.classList.toggle("show");
+}
+
+/* ============================================================
+   筛选功能
+   ============================================================ */
+function applyFilters() {
+  var filterOwner = document.getElementById("filterOwner").value;
+  var filterStatus = document.getElementById("filterStatus").value;
+
+  // 筛选KPI总表
+  document.querySelectorAll("#kpiTable tbody tr").forEach(function(row) {
+    var owner = row.getAttribute("data-owner");
+    var status = row.getAttribute("data-status");
+    var show = true;
+    if (filterOwner !== "all" && owner !== filterOwner) show = false;
+    if (filterStatus !== "all" && status !== filterStatus) show = false;
+    row.style.display = show ? "" : "none";
+  });
+
+  // 筛选P0表
+  document.querySelectorAll("#p0Table tbody tr").forEach(function(row) {
+    var owner = row.getAttribute("data-owner");
+    var show = true;
+    if (filterOwner !== "all" && owner !== filterOwner) show = false;
+    row.style.display = show ? "" : "none";
+  });
+}
+
+/* ============================================================
+   初始化
+   ============================================================ */
+function init() {
+  renderHeader();
+  renderOverview();
+  renderStores();
+  renderPersonCards();
+  renderKPITable();
+  renderP0Table();
+  renderNonCompliance();
+  renderAchievements();
+  renderSupport();
+
+  // 绑定筛选事件
+  document.getElementById("filterOwner").addEventListener("change", applyFilters);
+  document.getElementById("filterStatus").addEventListener("change", applyFilters);
+}
+
+// 页面加载完成后初始化
+document.addEventListener("DOMContentLoaded", init);
+
+// 暴露toggleNote到全局
+window.toggleNote = toggleNote;
+</script>
+
+</body>
+</html>
