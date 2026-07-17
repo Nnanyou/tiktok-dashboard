@@ -603,7 +603,7 @@ body {
 .store-owner strong { color: #555; }
 .store-metrics {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 14px;
 }
@@ -619,10 +619,11 @@ body {
   font-weight: 700;
 }
 .store-metric-value {
-  font-size: 22px;
+  font-size: 21px;
   color: #12304a;
   font-weight: 800;
   margin-top: 2px;
+  word-break: break-word;
 }
 
 .store-task-item {
@@ -836,7 +837,7 @@ body {
 const dashboardData = {
   "month": "2026年7月",
   "subtitle": "商品测试、内容产能、剪辑外包与核心工作流验证",
-  "updateTime": "2026-07-17 18:17",
+  "updateTime": "2026-07-17 18:24",
   "updatePeriod": "每3小时自动更新，18:25强制完整更新",
   "dataSource": "飞书多维表格「2026年7月月度KPI验收表」+「月度任务（半月）」+「店铺运营看板」",
   "overview": [
@@ -1499,6 +1500,46 @@ const dashboardData = {
       },
       {
         "type": "status",
+        "taskNo": "M04-01",
+        "name": "葛宗尚负责3款商品内容方向",
+        "owner": "葛宗尚",
+        "collaborator": "",
+        "module": "内容生产",
+        "priority": "P0",
+        "beforeActual": 2.0,
+        "afterActual": 0.0,
+        "target": 6.0,
+        "unit": "种",
+        "beforeRate": 33,
+        "afterRate": 0,
+        "beforeStatus": "进行中",
+        "afterStatus": "未开始",
+        "deadline": "2026-07-20",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "status",
+        "taskNo": "M04-03",
+        "name": "葛宗尚负责店铺视频发布",
+        "owner": "葛宗尚",
+        "collaborator": "",
+        "module": "内容生产",
+        "priority": "P0",
+        "beforeActual": 2.0,
+        "afterActual": 0.0,
+        "target": 10.0,
+        "unit": "条",
+        "beforeRate": 20,
+        "afterRate": 0,
+        "beforeStatus": "进行中",
+        "afterStatus": "未开始",
+        "deadline": "2026-07-31",
+        "needSupport": "否",
+        "delayed": "否"
+      },
+      {
+        "type": "status",
         "taskNo": "M05-03",
         "name": "筛选进入试单候选",
         "owner": "葛宗尚",
@@ -1591,8 +1632,8 @@ const dashboardData = {
         "unit": "套",
         "beforeRate": 100,
         "afterRate": 100,
-        "beforeStatus": "进行中",
-        "afterStatus": "已完成",
+        "beforeStatus": "已完成",
+        "afterStatus": "进行中",
         "deadline": "2026-07-16",
         "needSupport": "否",
         "delayed": "否"
@@ -1742,6 +1783,46 @@ const dashboardData = {
         },
         {
           "type": "status",
+          "taskNo": "M04-01",
+          "name": "葛宗尚负责3款商品内容方向",
+          "owner": "葛宗尚",
+          "collaborator": "",
+          "module": "内容生产",
+          "priority": "P0",
+          "beforeActual": 2.0,
+          "afterActual": 0.0,
+          "target": 6.0,
+          "unit": "种",
+          "beforeRate": 33,
+          "afterRate": 0,
+          "beforeStatus": "进行中",
+          "afterStatus": "未开始",
+          "deadline": "2026-07-20",
+          "needSupport": "否",
+          "delayed": "否"
+        },
+        {
+          "type": "status",
+          "taskNo": "M04-03",
+          "name": "葛宗尚负责店铺视频发布",
+          "owner": "葛宗尚",
+          "collaborator": "",
+          "module": "内容生产",
+          "priority": "P0",
+          "beforeActual": 2.0,
+          "afterActual": 0.0,
+          "target": 10.0,
+          "unit": "条",
+          "beforeRate": 20,
+          "afterRate": 0,
+          "beforeStatus": "进行中",
+          "afterStatus": "未开始",
+          "deadline": "2026-07-31",
+          "needSupport": "否",
+          "delayed": "否"
+        },
+        {
+          "type": "status",
           "taskNo": "M05-03",
           "name": "筛选进入试单候选",
           "owner": "葛宗尚",
@@ -1834,8 +1915,8 @@ const dashboardData = {
           "unit": "套",
           "beforeRate": 100,
           "afterRate": 100,
-          "beforeStatus": "进行中",
-          "afterStatus": "已完成",
+          "beforeStatus": "已完成",
+          "afterStatus": "进行中",
           "deadline": "2026-07-16",
           "needSupport": "否",
           "delayed": "否"
@@ -1947,9 +2028,9 @@ const dashboardData = {
     },
     "newTasks": [],
     "summary": {
-      "totalChanges": 14,
+      "totalChanges": 16,
       "progressIncreased": 6,
-      "statusChanged": 8,
+      "statusChanged": 10,
       "needSupport": 0,
       "delayed": 0
     }
@@ -1968,6 +2049,8 @@ const dashboardData = {
       "health": "green",
       "status": "正常运营",
       "dailyClicks": 31,
+      "videoViews": "148",
+      "videoLikes": "-",
       "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
@@ -1990,6 +2073,8 @@ const dashboardData = {
       "health": "green",
       "status": "正常运营",
       "dailyClicks": 0,
+      "videoViews": "-",
+      "videoLikes": "-",
       "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
@@ -2012,6 +2097,8 @@ const dashboardData = {
       "health": "green",
       "status": "正常运营",
       "dailyClicks": 30,
+      "videoViews": "221+147",
+      "videoLikes": "-",
       "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
@@ -2034,6 +2121,8 @@ const dashboardData = {
       "health": "green",
       "status": "正常运营",
       "dailyClicks": 0,
+      "videoViews": "-",
+      "videoLikes": "-",
       "note": "每日记录曝光/点击/成交/加购",
       "tasks": [
         {
@@ -2265,6 +2354,8 @@ function renderStores() {
     html += '<div class="store-owner">负责人：<strong>' + store.owner + '</strong></div>';
     html += '<div class="store-metrics">';
     html += '<div class="store-metric"><div class="store-metric-label">每日点击</div><div class="store-metric-value">' + (store.dailyClicks || 0) + '</div></div>';
+    html += '<div class="store-metric"><div class="store-metric-label">视频播放</div><div class="store-metric-value">' + (store.videoViews || "-") + '</div></div>';
+    html += '<div class="store-metric"><div class="store-metric-label">视频点赞</div><div class="store-metric-value">' + (store.videoLikes || "-") + '</div></div>';
     html += '<div class="store-metric"><div class="store-metric-label">店铺状态</div><div class="store-metric-value" style="font-size:16px;">' + (store.status || healthLabel) + '</div></div>';
     html += '</div>';
 
